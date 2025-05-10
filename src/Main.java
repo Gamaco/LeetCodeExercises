@@ -1,15 +1,16 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.HashMap;
+import java.util.Map;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+public class Main {
+
+
+    public static void main(String[] args) {
+
+        String SENTENCE = "Most books reviewed on this site have been provided free of charge by the publisher, author or publicist. On occasion, we review books we have purchased with our own money or borrowed from a public library. Any links to places to purchase books are provided as a convenience, and do not serve as an endorsement by this blog. All reviews are the true and honest opinion of the blogger reviewing the book. The method of acquiring the book does not have a bearing on the content of the review.";
+
+        WordCounter wc = new WordCounter();
+
+        System.out.println(wc.getSingleWordCount(SENTENCE, "this"));
     }
 }
