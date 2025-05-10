@@ -11,6 +11,6 @@ public class Main {
 
         WordCounter wc = new WordCounter();
 
-        System.out.println(wc.getSingleWordCount(SENTENCE, "this"));
+        System.out.println(wc.getSingleWordCount(SENTENCE, "have"));
     }
 }
