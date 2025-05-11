@@ -3,20 +3,39 @@ import java.util.List;
 
 public class ListFilter {
 
-    // Example usage
-    // List<Object> ee = new ArrayList<>(Arrays.asList(1, 2, "a", "b", 6, "x", 19));
-    // filterList(ee)
+    public ListFilter() {}
 
-    public ListFilter() {
-
-    }
-
-    public List<Object> filterList(List<Object> list) {
+    /**
+     * Takes in a list of objects with mixed strings and integers
+     * and returns a filtered list with just the numeric values.
+     * @param list List with mixed string and integers values.
+     * @return Filtered list with just numeric values.
+     */
+    public List<Object> filterListByNumericValues(List<Object> list) {
 
         List<Object> numbers = new ArrayList<>();
 
         for (Object value : list) {
             if (value instanceof Number) {
+                numbers.add(value);
+            }
+        }
+
+        return numbers;
+    }
+
+    /**
+     * Takes in a list of objects with mixed strings and integers
+     * and returns a filtered list with just the string values.
+     * @param list List with mixed string and integers values.
+     * @return Filtered list with just string values.
+     */
+    public List<Object> filterListByStringValues(List<Object> list) {
+
+        List<Object> numbers = new ArrayList<>();
+
+        for (Object value : list) {
+            if (!(value instanceof Number)) {
                 numbers.add(value);
             }
         }

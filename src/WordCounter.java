@@ -5,9 +5,7 @@ import static java.lang.String.format;
 
 public class WordCounter {
 
-    public WordCounter() {
-
-    }
+    public WordCounter() {}
 
     /**
      * Counts the amount of occurrences of a specific word in a given string.
